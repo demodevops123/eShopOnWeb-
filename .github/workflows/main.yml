@@ -13,4 +13,5 @@ jobs:
         uses: azure/cli@v1
         with:
           inlineScript: |
-            az storage account create --name demospstoraccxyz --resource-group myresourcegroup --location westus2
+            az --version
+            #az storage account create --name demospstoraccxyz --resource-group myresourcegroup --location westus2
