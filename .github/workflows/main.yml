@@ -13,4 +13,4 @@ jobs:
         uses: azure/cli@v1
         with:
           inlineScript: |
-            az webapp deploy --name my-web-app --resource-group sp-demo-rg --source-path
+            az storage account create --name demospstoraccxyz --resource-group myresourcegroup --location westus2
