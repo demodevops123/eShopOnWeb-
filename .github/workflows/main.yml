@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Azure CLI
+        uses: actions/setup-azure-cli@v4
+
+      - name: Deploy web app to Azure
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            az webapp deploy --name my-web-app --resource-group sp-demo-rg --source-path
