@@ -6,8 +6,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Azure CLI
-        uses: actions/setup-azure-cli@v4
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2.2.6
         with:
