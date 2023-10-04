@@ -10,7 +10,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Deploy web app to Azure
+      - name: Create a storage account in Azure
         uses: Azure/cli@v1.0.8
         with:
           inlineScript: |
