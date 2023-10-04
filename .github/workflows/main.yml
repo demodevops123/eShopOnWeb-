@@ -10,15 +10,6 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-           
-      - name: Azure WebApp
-        uses: Azure/webapps-deploy@v2.2.6
-        with:
-          # Name of the Azure Web App
-          app-name: demowebappxyz001
-          
-          # Enter the resource group name of the web app
-          resource-group-name: sp-demo-rg
       - name: Deploy web app to Azure
         uses: Azure/cli@v1.0.8
         with:
