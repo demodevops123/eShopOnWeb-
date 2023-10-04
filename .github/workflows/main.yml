@@ -6,6 +6,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Azure Login
+        uses: Azure/login@v1.4.2
+        with:
+          # ClientId of the Azure Service principal created.
+          client-id: ${{ secrets.AZURE_CREDENTIALS }}
+          # TenantId of the Azure Service principal created.
+          tenant-id: ${{ secrets.AZURE_CREDENTIALS }}
+          # Azure subscriptionId
+          subscription-id: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2.2.6
         with:
