@@ -10,7 +10,7 @@ jobs:
         uses: actions/setup-azure-cli@v4
 
       - name: Deploy web app to Azure
-        uses: azure/cli@v2
+        uses: Azure/cli@v1.0.8
         with:
           inlineScript: |
             az --version
