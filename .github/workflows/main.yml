@@ -8,10 +8,17 @@ jobs:
     steps:
       - name: Set up Azure CLI
         uses: actions/setup-azure-cli@v4
-
+      - name: Azure WebApp
+        uses: Azure/webapps-deploy@v2.2.6
+        with:
+          # Name of the Azure Web App
+          app-name: demowebappxyz001
+          
+          # Enter the resource group name of the web app
+          resource-group-name: sp-demo-rg
       - name: Deploy web app to Azure
         uses: Azure/cli@v1.0.8
         with:
           inlineScript: |
             az --version
-            #az storage account create --name demospstoraccxyz --resource-group myresourcegroup --location westus2
+            #az storage account create --name demospstoraccxyz --resource-group sp-demo-rg --location westus2
