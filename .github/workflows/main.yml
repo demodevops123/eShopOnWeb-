@@ -7,10 +7,10 @@ jobs:
 
     steps:
       - name: Azure Login
-        uses: Azure/login@v1.4.2
+        uses: azure/login@v1
         with:
-          # ClientId of the Azure Service principal created.
-          credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+           
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2.2.6
         with:
