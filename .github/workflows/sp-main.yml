@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Az CLI login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Create a storage account in Azure
+        uses: Azure/cli@v1.0.8
+        with:
+          inlineScript: |
+            az --version
+            az storage account create --name demospstoraccxyz02 --resource-group sp-demo-rg --location westus2
