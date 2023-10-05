@@ -17,4 +17,4 @@ jobs:
         with:
           inlineScript: |
             az --version
-            az storage account create --name demospstoraccxyz --resource-group sp-demo-rg --location westus2
+            az storage account create --name demospstoraccxyz01 --resource-group sp-demo-rg --location westus2
